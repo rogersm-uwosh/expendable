@@ -4,6 +4,8 @@ namespace Tabberama;
 
 public static class MauiProgram
 {
+	public static QuizzesModel QuizzesModel { get; } = new QuizzesModel();
+	
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();

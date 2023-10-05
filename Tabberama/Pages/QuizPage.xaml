@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Tabberama.QuizPage"
+    IconImageSource="icons8_quiz_100.png"
+    
+    Title="Quizzes">
+    <Grid RowDefinitions="*,3*,*,10*,*" ColumnDefinitions="*" HorizontalOptions="Center">
+        <Label Text="Quizzes"
+            FontSize="Large"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Grid.Row="0" Grid.Column="0" />
+        <Label Grid.Row="1" Grid.Column="0" Text="{Binding Statistics}" HorizontalOptions="Center"
+            VerticalOptions="Center" />
+        <Label Grid.Row="2" Grid.Column="0" Text="{Binding CurrentQuestion}"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+        />
+        <VerticalStackLayout VerticalOptions="Start"
+            Grid.Row="3" Grid.Column="0">
+            <RadioButton Content="{Binding Answers[0]}" />
+            <RadioButton Content="{Binding Answers[1]}" />
+            <RadioButton Content="{Binding Answers[2]}" />
+            <RadioButton Content="{Binding Answers[3]}" />
+        </VerticalStackLayout>
+        <Button Text="Submit Answer" Grid.Row="4" Grid.Column="0" />
+    </Grid>
+</ContentPage>
